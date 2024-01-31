@@ -6,5 +6,5 @@ if [[ "$1" = "--loop" ]]; then
 	done
 else
 	echo 'awake is now preventing sleep'
-	systemd-inhibit ~/scripts/awake --loop
+	systemd-inhibit $0 --loop
 fi
