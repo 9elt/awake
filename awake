@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ "$1" = "--loop" ]]; then
+	while true; do
+		:
+	done
+else
+	echo 'awake is now preventing sleep'
+	systemd-inhibit ~/scripts/awake --loop
+fi
